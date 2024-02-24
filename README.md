@@ -20,9 +20,12 @@ DeveloperAssist的应用场景针对下列软件开发过程中的痛点：
 **Fig. 1  DeveloperAssist 的解决方案框架**
 </div>
 
-下面给出一个利用DeveloperAssist完成软件需求分析的例子
-作为停车用户，我希望能够获得停车的引导，以便快速的停车或停到有性价比的车位。
-作为停车场运营商，我希望能够检测空闲的车位并合理调度用户停车，以便降低车位的闲置率，提高车位的收益。
+下面给出一个DeveloperAssist引导开发者完成软件需求分析，输出用户故事的例子
+<div align = "center">
+    <img src="images/example1.png" width="500">  
+
+**Fig. 2  提问引擎引导开发者输出用户故事的示例**
+</div>
 
 
 ### 1.3 软件使用手册
