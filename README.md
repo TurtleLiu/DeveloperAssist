@@ -208,11 +208,14 @@ https://arxiv.org/pdf/2401.04088.pdf
 >**提问**：太棒了，您已经找到了软件可以拓展的能力。如何评价这些能力的效果？请使用“作为XX，我希望XX，以便于XX”的格式告诉我。  
 
 
-构建目标数据集用到的原始数据资源：
+构建目标数据集用到的原始数据资源如表格所示
 |数据集名称|检验的能力|数据格式| 链接 |
 |:--:|:--:|:--:|:--:|
-| CodeSearchNet | 自然语言检索代码 | （func_name: 函数名，language: 编程语言，code: 函数的具体代码，docstring: 函数中最靠前的注释或描述文本）| https://github.com/github/CodeSearchNet |
-| CodeXGLUE | 代码智能任务，包括：**代码-代码**（克隆检测、缺陷检测、代码填空、代码补全、代码修复和不同语言代码翻译）**文本-代码**（自然语言检索代码、自然语言生成代码）**代码-文本**（代码摘要）**文本-文本**（文档翻译） | **自然语言检索代码**（func_name: 函数名，language: 编程语言，code: 函数的具体代码，docstring: 函数中最靠前的注释或描述文本），**自然语言生成代码**（nl：对函数功能的自然语言描述，code: 生成的Java函数代码）| https://github.com/microsoft/CodeXGLUE |
+| CodeSearchNet | 自然语言检索代码 | func_name: 函数名<br>language: 编程语言<br>code: 函数的具体代码<br>docstring: 函数中最靠前的注释或描述文本| https://github.com/github/CodeSearchNet |
+| CodeXGLUE | 代码智能任务，包括：<br>代码-代码（克隆检测、缺陷检测、代码填空、代码补全、代码修复和不同语言代码翻译）<br>文本-代码（自然语言检索代码、自然语言生成代码）<br>代码-文本（代码摘要）<br>文本-文本（文档翻译） | 自然语言检索代码<br>func_name: 函数名<br>language: 编程语言<br>code: 函数的具体代码<br>docstring: 函数中最靠前的注释或描述文本<br>自然语言生成代码<br>nl：对函数功能的自然语言描述<br>code: 生成的Java函数代码）| https://github.com/microsoft/CodeXGLUE |
+| LeetCode | 自然语言生成代码 |title: 问题名称<br>difficulty: 难度<br>description: 问题描述<br>java: Java的解答代码<br>c++: C++的解答代码<br>python: Python的解答代码<br>javascript: JavaScript的解答代码 | https://huggingface.co/datasets/greengerong/leetcode |
+| SemEval | 自然语言智能任务，包括：找出语义关联、观点论证、大语言模型生成文本识别、知识表示与推理 | 横向思维（创造力）推理：<br>Question: 推理问题<br>Choice: 供选择的答案以及正确答案| https://semeval.github.io/SemEval2024/tasks.html |
+| Defects4J | 使用真实的Bug支持软件测试相关能力的实证研究 | 对每一个Bug，包含以下数据：<br>·在相应的问题跟踪器中提交的问题，以及修复提交消息中提到的问题跟踪器标识符。<br>·在单个commit的修复。<br>·最小化：Defects4J维护人员手动删除提交中不相关的更改（例如，重构或功能添加）。<br>·通过修改源代码（与配置文件、文档或测试文件相反）修复。<br>·存在一个触发测试，它在修复之前失败，在修复之后通过——测试失败不是随机的，也不取决于测试执行顺序。| https://github.com/rjust/defects4j |
 
 下载完成后，可使用如下方法，将数据集转化为我们训练任务所需的格式：
 ... 未完待续 |•'-'•) ✧...
