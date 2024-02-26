@@ -29,26 +29,26 @@ DeveloperAssist的应用场景针对下列软件开发过程中的痛点：
 
 
 ### 1.3 软件使用手册
-#### 1.3.1. 软件下载
-**硬件基础条件**  
+#### 1.3.1. 软件安装
+**硬件需求**  
 * GPU 型号：NVIDIA GeForce RTX 3090 
 * 核数：2
 * 显存大小：48 GiB  
 
-**软件库**   
+**软件需求**   
 * 操作系统版本：Ubuntu 20.04.4
 * 运行环境：python==3.8.10, pytorch==2.1.0-cu121
 
-**软件下载与安装**
-用户可通过如下方式下载DeveloperAssist软件压缩包
+**安装步骤**  
+* 通过如下方式下载DeveloperAssist软件压缩包
 ```bash
 ... 未完待续 |•'-'•) ✧...
 ```
-解压压缩包后，通过如下方式安装DeveloperAssist
+* 解压压缩包后，通过如下方式安装DeveloperAssist
 ```bash
 ... 未完待续 |•'-'•) ✧...
 ```
-安装完毕后，使用如下方式启动DeveloperAssist
+* 安装完毕后，使用如下方式启动DeveloperAssist
 ```bash
 ... 未完待续 |•'-'•) ✧...
 ```
