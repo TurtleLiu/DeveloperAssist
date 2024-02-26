@@ -218,9 +218,13 @@ https://arxiv.org/pdf/2401.04088.pdf
 | Defects4J | 使用真实的Bug支持软件测试相关能力的实证研究 | 对每一个Bug，包含以下数据：<br>·在相应的问题跟踪器中提交的问题，以及修复提交消息中提到的问题跟踪器标识符。<br>·在单个commit的修复。<br>·最小化：Defects4J维护人员手动删除提交中不相关的更改（例如，重构或功能添加）。<br>·通过修改源代码（与配置文件、文档或测试文件相反）修复。<br>·存在一个触发测试，它在修复之前失败，在修复之后通过——测试失败不是随机的，也不取决于测试执行顺序。| https://github.com/rjust/defects4j |
 
 下载完成后，可使用如下方法，将数据集转化为我们训练任务所需的格式：
+```bash
 ... 未完待续 |•'-'•) ✧...
+```
 也可以直接下载我们已经处理好的数据集，地址为：
+```bash
 ... 未完待续 |•'-'•) ✧...
+```
 
 #### 2.2.2 数据预处理
 我们对于数据的预处理工作主要分为两部分：1. 对数据的清洗；2. 对数据的格式转换。
@@ -235,16 +239,11 @@ https://arxiv.org/pdf/2401.04088.pdf
     <div style="border: 1px solid black; border-radius: 10px; background-color: white; padding: 5pt; margin: 5pt; color: black; width:300pt;height:200pt;overflow:auto;">
 
     **\<s\> [INST]**  
-    **Counceling Question**    
+    **Developer Output**    
     xxxx  
     **[/INST]**  
-    **Analysis**     
-    Symptom Type: xxx    
-    Reasons:    
-        1. xxxx  
-        2. xxxx    
-    ...       
-
+    **Mission Type**     
+    xxx    
     **Advice**  
         1. xxxx  
         2. xxxx    
