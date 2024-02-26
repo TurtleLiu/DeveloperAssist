@@ -94,11 +94,11 @@ DevelopAssist为用户提供了9类功能：
 **Fig.3 重现实验步骤** 
 </div>
 
-在本次试验中，我们进行微调的下游任务类型为 **Question Answering**，因此我们选择擅长此类任务的 **因果类语言模型**，即 **decoder-only** 模型进行微调，对于此类模型进行微调的基本原理如下：
+在本次试验中，我们进行微调的下游任务类型为 **Question Answering**，因此我们选择擅长此类任务的 **因果类语言模型**，即 **decoder-only** 模型进行微调，对于此类模型进行微调的基本原理如图Fig.4所示，左图所示为基座模型预训练的形式：next token prediction，对于输入文本，会将当前token后面的tokens全部屏蔽掉，用前面的tokens作为输入，输出为预测单词的概率分布，将此概率分布与真实的单词的one-hot编码进行交叉熵损失计算，通过反向传播更新模型参数。右图所示为微调的形式，基本逻辑与预训练相同，只是在预训练的基础上，我们不需要对prompt部分进行损失计算，只需要对answer部分进行与预训练相同的操作，同时由于预训练采用lora方法，因此训练只更新 **lora layer** 的参数
 <div align = "center">
     <img src="images/img26.png" width="500">
-
-**Fig.4 ** 如图所示，左图所示为基座模型预训练的形式：next token prediction，对于输入文本，会将当前token后面的tokens全部屏蔽掉，用前面的tokens作为输入，输出为预测单词的概率分布，将此概率分布与真实的单词的one-hot编码进行交叉熵损失计算，通过反向传播更新模型参数。右图所示为微调的形式，基本逻辑与预训练相同，只是在预训练的基础上，我们不需要对prompt部分进行损失计算，只需要对answer部分进行与预训练相同的操作，同时由于预训练采用lora方法，因此训练只更新 **lora layer** 的参数。
+  
+**Fig.4 模型微调原理** 
 </div>
 
 ### 2.0 实验环境
@@ -133,7 +133,7 @@ gradio==4.12.0
 
 可以使用如下方法下载项目并配置环境
 ```bash
-git clone https://github.com/PhyAssist-project/PhyAssist_source.git
+git clone https://github.com/TurtleLiu/DeveloperAssist.git
 cd PhyAssist_source
 pip install -r requirements.txt
 ```
